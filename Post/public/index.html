@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Registration form in html & css</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style3.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="nav-bar flex">
+                <div class="first-holder flex">
+                    <h1 class="logo" style="color: white; "><a href="http://localhost:5000/" style="text-decoration: none">SpaceFreak</a></h1>
+
+                    <a href="#" id="m-bar"><i class="fas fa-bars hm"></i></a>
+                </div>
+
+                <div id="menu-links" class="hidden">
+                    <ul>
+                        <li><a href="http://localhost:5000/">Home</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Learn More</a></li>
+                    </ul>
+                </div>
+
+                <a href="#" id="btn" class="hidden">Post Your Dream</a>
+
+            </div>
+
+        </div>
+    </header>
+
+    <section id="section-wrapper" class="img">
+        <div class="box-wrapper">
+            <div class="form-box">
+                <form action="/" method="post">
+                    <h4 class="form-title">Post Your Big Dreams On Space</h4>
+                    <div class="form-fields">
+                        <div class="form-group">
+                            <input type="text" class="user-name" placeholder="Your Name" name="name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="user-email" placeholder="Your Email" name="email">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="user-pass" placeholder="Topic Name" name="topic">
+                        </div>
+                        <div class="form-group">
+                            <textarea type="text" class="user-name" placeholder="Your Suggestion" name="content"></textarea>
+                        </div>
+                    </div>
+                    <input type="submit" value="Submit" class="submit-button">
+                </form>
+            </div>
+            <div class="bg-box">
+                <img src="images/lol.png">
+            </div>
+        </div>
+    </section>
+    <br><br><br><br><br><br>
+
+    <footer class="footer-section">
+        <div class="container">
+            <div class="footer-cta pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fa fa-map-marker-alt"></i>
+                            <div class="cta-text">
+                                <h4>Find us</h4>
+                                <span>Reva University, Banglore</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fa fa-phone"></i>
+                            <div class="cta-text">
+                                <h4>Call us</h4>
+                                <span>8431121608</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fa fa-envelope-open"></i>
+                            <div class="cta-text">
+                                <h4>Mail us</h4>
+                                <span>universevg2001@info.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-content pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-logo">
+                                <a href="index.html" style="color:white;text-decoration:none;font-weight:bolder;font-size:40px">Space Freak</a>
+                            </div>
+                            <div class="footer-text">
+                                <p>It's about believing in the future and thinking that the future will be better than the past.</p>
+                            </div>
+                            <div class="footer-social-icon">
+                                <span>Follow us</span>
+                                <a href="https://www.facebook.com/gmvarun.varun.5/"><i class="fa fa-facebook-f facebook-bg"></i></a>
+                                <a href="https://twitter.com/GMVarun2"><i class="fa fa-twitter twitter-bg"></i></a>
+                                <a href="https://www.instagram.com/space_freak3/"><i class="fa fa-instagram" style="background-color: brown;"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Useful Links</h3>
+                            </div>
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">about</a></li>
+                                <li><a href="#">services</a></li>
+                                <li><a href="#">portfolio</a></li>
+                                <li><a href="#">Contact</a></li>
+                                <li><a href="#">About us</a></li>
+                                <li><a href="#">Our Services</a></li>
+                                <li><a href="#">Expert Team</a></li>
+                                <li><a href="#">Contact us</a></li>
+                                <li><a href="#">Latest News</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Subscribe</h3>
+                            </div>
+                            <div class="footer-text mb-25">
+                                <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                            </div>
+                            <div class="subscribe-form">
+                                <form action="#">
+                                    <input type="text" placeholder="Email Address">
+                                    <button><i class="fa fa-telegram"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                        <div class="copyright-text">
+                            <p>Copyright &copy; 2021, All Right Reserved <a href="https://www.linkedin.com/in/varun-gm-86694a1a4/">SpaceFreak</a></p>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                        <div class="footer-menu">
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Terms</a></li>
+                                <li><a href="#">Privacy</a></li>
+                                <li><a href="#">Policy</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let toggle = document.getElementById('m-bar')
+
+        let holder = document.getElementById('menu-links')
+        let btn = document.getElementById('btn')
+
+        toggle.addEventListener('click', () => {
+            if (holder.className === "hidden") {
+                holder.className = "not-hidden"
+                btn.className = "not-hidden"
+            } else {
+                holder.className = "hidden"
+                btn.className = "hidden"
+            }
+        })
+    </script>
+
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpaceFreak.com</title>
+    <!-- CSS only -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="style4.css">
+     
+</head>
+
+<body style="background-image: url('images/img.jpg');background-repeat: no-repeat; background-size: cover; font-family: 'Roboto', sans-serif;">
+    <header>
+        <div class="container">
+            <div class="nav-bar flex">
+                <div class="first-holder flex">
+                    <h1 class="logo" style="color: white; "><a href="#" style="text-decoration: none">SpaceFreak</a></h1>
+
+                    <a href="#" id="m-bar"><i class="fas fa-bars hm"></i></a>
+                </div>
+
+                <div id="menu-links" class="hidden">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Learn More</a></li>
+                    </ul>
+                </div>
+
+                <a href="http://localhost:8000/" id="btn" class="hidden">Post Your Dream</a>
+
+            </div>
+
+        </div>
+    </header>
+
+    <main class="container">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="images/bg.jpg" alt="First slide">
+        <div class="carousel-caption d-none d-md-block">
+    <h5  style="color:red;font-weight:bold;">15 new planets discovered</h5>
+    <p style="color:yellow;font-weight:bold;">Scientists have discovered 15 new planets - including one 'super-Earth' that could harbour liquid water - orbiting small, cool stars near our solar system.</p>
+    <p><a href="https://www.dnaindia.com/technology/report-15-new-planets-discoverd-of-them-one-super-earth-could-harbour-liquid-water-2593120" target="blank" class=" fw-bold" style="color:orange;">Continue reading...</a></p>
+  </div>
+
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="images/bg2.jpg" alt="Second slide">
+              <div class="carousel-caption d-none d-md-block">
+    <h5  style="color:red;font-weight:bold;">What is a nebula?</h5>
+    <p style="color:yellow;font-weight:bold;">A nebula is an enormous cloud of dust and gas occupying the space between stars and acting as a nursery for new stars. The roots of the word come from Latin nebula, which means a “mist, vapor, fog, smoke, exhalation.”</p>
+    <p><a href="https://spacecenter.org/what-is-a-nebula/" target="blank" class=" fw-bold" style="color:orange;">Continue reading...</a></p>
+  </div>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="images/bg3.jpg" alt="Third slide">
+              <div class="carousel-caption d-none d-md-block">
+    <h5  style="color:red;font-weight:bold;">Three new ultra-faint dwarf galaxies discovered</h5>
+    <p style="color:yellow;font-weight:bold;">Using the Hubble Space Telescope (HST), astronomers have detected three new ultra-faint dwarf galaxies associated with the nearby spiral galaxy NGC 253.</p>
+    <p><a href="https://phys.org/news/2021-08-ultra-faint-dwarf-galaxies.html" target="blank" class=" fw-bold" style="color:orange;">Continue reading...</a></p>
+  </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+
+        <div class="row mb-2">
+        <h1 style="color:yellow;text-align:center;font-weight:bold;">Here are some Big Dreams Of Space Freaks:</h1>
+             <%noteList.forEach(note => { %>
+                <div class="col-md-6" >
+                  
+                    <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                        <div class="col p-4 d-flex flex-column position-static" style="background-image:url('images/sug.jpg');background-size: cover;background-repeat: no-repeat;">
+                            <strong class="d-inline-block mb-2 "  style="color:gold; font-weight:bold">Name:- <%=note.Name %></strong>
+                            <h4 class="mb-0"  style="color:brown;">
+                                Email Id:- <%=note.Email%>
+                            </h4>
+                            <div class="mb-1 "  style="color:chartreuse; font-weight:bold">
+                                Topic:- <%=note.Topic%>
+                            </div>
+                            <p class="card-text mb-auto"  style="color:white; font-weight:bold">
+                               Idea:- <%=note.Content%>
+                            </p>
+                            <hr style="color:silver">
+                            <a href="#" class="stretched-link" style="color:orange; font-weight:bold">Continue reading</a>
+                        </div>
+                    </div>
+                </div>
+                <% })%>                
+        </div>
+
+        <div class="row g-5">
+          <h1 style="color:yellow;text-align:center;font-weight:bold;">Blogs Made By Some Space Freaks:</h1>
+            <div class="col-md-8">
+                <h3 class="pb-4 mb-4 fst-italic border-bottom" style="color:gold; font-weight:bold;">
+                     Star Trek An Inspiration
+                </h3>
+
+                <article class="blog-post">
+                    <h2 class="blog-post-title" style="color:brown; font-weight:bold">Where no man has gone before</h2>
+                    <p class="blog-post-meta" style="color:chartreuse; font-weight:bold">By Varun</p>
+
+                    <p style="color:white; font-weight:bold"> We love Star Trek, having inducted the long-running, genre defining franchise this past year. With such a storied history and rich lore, not to mention a bright future, there’s a ton for fans and newcomers alike to learn. Here’s our list of the best places online to follow everything Star Trek.  </p>
+                    <hr>
+                </article>
+
+                 <h3 class="pb-4 mb-4 fst-italic border-bottom" style="color:gold; font-weight:bold;"><a href="https://www.nasa.gov/centers/glenn/technology/warp/warp.html" style="text-decoration: none; color: gold;" >
+                     Is Warp Drive Real?
+                </a></h3> 
+
+                <article class="blog-post">
+                    <h2 class="blog-post-title" style="color:brown; font-weight:bold">All About Warp Drive</h2>
+                    <p class="blog-post-meta" style="color:chartreuse; font-weight:bold">By Programming Freak</p>
+
+                    <p style="color:white; font-weight:bold"> Ever since the sound barrier was broken, people have turned their attention to how we can break the light speed barrier.  But “Warp Drive” or any other term for faster-than-light travel still remains at the level of speculation.The bulk of scientific knowledge concludes that it’s impossible, especially when considering Einstein’s Theory of Relativity. There are certainly some credible concepts in scientific literature, however it’s too soon to know if they are viable.   </p>
+                    <hr>
+                </article>
+
+                
+                 <h3 class="pb-4 mb-4 fst-italic border-bottom" style="color:gold; font-weight:bold;">
+                     Einstein's theory of general relativity
+                </h3>
+
+                <article class="blog-post">
+                    <h2 class="blog-post-title" style="color:brown; font-weight:bold">General Theory of Relativity</h2>
+                    <p class="blog-post-meta" style="color:chartreuse; font-weight:bold">By Einstein</p>
+
+                    <p style="color:white; font-weight:bold"> General relativity is physicist Albert Einstein's understanding of how gravity affects the fabric of space-time.The theory, which Einstein published in 1915, expanded the theory of special relativity that he had published 10 years earlier. Special relativity argued that space and time are inextricably connected, but that theory didn't acknowledge the existence of gravity.   </p>
+                    <hr>
+                </article>
+
+            </div>
+            
+
+            <div class="col-md-4">
+                <div class="position-sticky" style="top: 2rem;">
+              <div class="container mt-4 mb-4 p-3 d-flex justify-content-center">
+    <div class="card p-4" >
+        <div class=" image d-flex flex-column justify-content-center align-items-center"> <button class="btn btn-secondary"> <img src="images/logo.png" height="100" width="100" /></button> <span class="name mt-3">Space Freak</span> <span class="idd">@space_freak3</span>
+            <div class=" d-flex mt-2"> <button class="btn1 btn-dark"><a href="https://www.linkedin.com/in/varun-gm-86694a1a4/" style="text-decoration: none">About us</a></button> </div>
+            <div class="d-flex flex-row justify-content-center align-items-center mt-3" style="color:red;font-weight:bold;">Our Goal </div>
+            <div class="text mt-3"> <span>We Dream and Work harder to make star Trek come true.<br><br>"Where no man has gone before"</span> </div>
+            <div class="gap-3 mt-3 icons d-flex flex-row justify-content-center align-items-center"> <span><i class="fa fa-twitter"></i></span> <span><i class="fa fa-facebook-f"></i></span> <span><i class="fa fa-instagram"></i></span> <span><i class="fa fa-linkedin"></i></span> </div>
+            <div class=" px-2 rounded mt-4 date "> <span class="join">Joined April,2021</span> </div>
+        </div>
+    </div>
+</div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <br><br><br><br><br><br>
+
+
+    <footer class="footer-section">
+        <div class="container">
+            <div class="footer-cta pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fa fa-map-marker-alt"></i>
+                            <div class="cta-text">
+                                <h4>Find us</h4>
+                                <span>Reva University, Banglore</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fa fa-phone"></i>
+                            <div class="cta-text">
+                                <h4>Call us</h4>
+                                <span>8431121608</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fa fa-envelope-open"></i>
+                            <div class="cta-text">
+                                <h4>Mail us</h4>
+                                <span>universevg2001@info.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-content pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-logo">
+                                <a href="index.html" style="color:white;text-decoration:none;font-weight:bolder;font-size:40px">Space Freak</a>
+                            </div>
+                            <div class="footer-text">
+                                <p>It's about believing in the future and thinking that the future will be better than the past.</p>
+                            </div>
+                            <div class="footer-social-icon">
+                                <span>Follow us</span>
+                                <a href="https://www.facebook.com/gmvarun.varun.5/"><i class="fa fa-facebook-f facebook-bg"></i></a>
+                                <a href="https://twitter.com/GMVarun2"><i class="fa fa-twitter twitter-bg"></i></a>
+                                <a href="https://www.instagram.com/space_freak3/"><i class="fa fa-instagram" style="background-color: brown;"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Useful Links</h3>
+                            </div>
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">about</a></li>
+                                <li><a href="#">services</a></li>
+                                <li><a href="#">portfolio</a></li>
+                                <li><a href="#">Contact</a></li>
+                                <li><a href="#">About us</a></li>
+                                <li><a href="#">Our Services</a></li>
+                                <li><a href="#">Expert Team</a></li>
+                                <li><a href="#">Contact us</a></li>
+                                <li><a href="#">Latest News</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Subscribe</h3>
+                            </div>
+                            <div class="footer-text mb-25">
+                                <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                            </div>
+                            <div class="subscribe-form">
+                                <form action="#">
+                                    <input type="text" placeholder="Email Address">
+                                    <button><i class="fa fa-telegram"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                        <div class="copyright-text">
+                            <p>Copyright &copy; 2021, All Right Reserved <a href="https://www.linkedin.com/in/varun-gm-86694a1a4/">SpaceFreak</a></p>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                        <div class="footer-menu">
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Terms</a></li>
+                                <li><a href="#">Privacy</a></li>
+                                <li><a href="#">Policy</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+    
+
+     
+
+
+ <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+    <script>
+        let toggle = document.getElementById('m-bar')
+
+        let holder = document.getElementById('menu-links')
+        let btn = document.getElementById('btn')
+
+        toggle.addEventListener('click', () => {
+            if (holder.className === "hidden") {
+                holder.className = "not-hidden"
+                btn.className = "not-hidden"
+            } else {
+                holder.className = "hidden"
+                btn.className = "hidden"
+            }
+        })
+    </script>
+
+
+
+
+</body>
+
+</html>
